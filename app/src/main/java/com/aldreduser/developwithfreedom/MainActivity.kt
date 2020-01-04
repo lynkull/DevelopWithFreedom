@@ -18,4 +18,7 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, HideAndShowLayoutActivity::class.java)
         startActivity(intent)
     }
+
+
+    // for file storage can use buffer reader or scanner
 }
