@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 
-// use this app to build anything adn test your skills
+// use this app to build anything and test your skills
+
+// also do a drop down menu
+// file storage PrintStream(openFIleOutput("out.txt", MODE_PRIVATE))
 
 class MainActivity : AppCompatActivity() {
 

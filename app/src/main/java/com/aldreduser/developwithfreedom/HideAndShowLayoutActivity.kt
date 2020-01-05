@@ -7,10 +7,6 @@ import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import kotlinx.android.synthetic.main.activity_hide_and_show_layout.*
 
-// layout will show when the button is clicked
-// also do a drop down menu
-// file storage PrintStream(openFIleOutput("out.txt", MODE_PRIVATE))
-
 class HideAndShowLayoutActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
