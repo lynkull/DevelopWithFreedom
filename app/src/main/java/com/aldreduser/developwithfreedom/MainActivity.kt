@@ -18,6 +18,10 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, HideAndShowLayoutActivity::class.java)
         startActivity(intent)
     }
+    fun marginsPaddingButtonCicked(view: View) {
+        val intent = Intent(this, MarginsPaddingActivity::class.java)
+        startActivity(intent)
+    }
 
 
     // for file storage can use buffer reader or scanner
