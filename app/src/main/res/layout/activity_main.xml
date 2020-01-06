@@ -20,23 +20,29 @@
                 android:id="@+id/button11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
                 android:background="#F76B00"
                 android:paddingLeft="10sp"
                 android:paddingRight="10sp"
                 android:text="2,3 Notification"
-                tools:layout_editor_absoluteX="204dp"
-                tools:layout_editor_absoluteY="373dp" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button10" />
 
             <Button
                 android:id="@+id/button8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:background="#44ECC2"
                 android:paddingLeft="10sp"
                 android:paddingRight="10sp"
                 android:text="2,3 Context"
-                tools:layout_editor_absoluteX="8dp"
-                tools:layout_editor_absoluteY="507dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button9" />
 
             <Button
                 android:id="@+id/button5"
@@ -44,6 +50,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
                 android:background="#FF80D4"
                 android:paddingLeft="10sp"
                 android:paddingRight="10sp"
@@ -55,8 +62,10 @@
                 android:id="@+id/button13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
+                android:background="#F5A011"
                 android:text="1 Functions and Parameters"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button14" />
@@ -79,12 +88,15 @@
                 android:id="@+id/button12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:background="#EE2720F5"
                 android:paddingLeft="10sp"
                 android:paddingRight="10sp"
                 android:text="2,3 Service"
-                tools:layout_editor_absoluteX="107dp"
-                tools:layout_editor_absoluteY="442dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button6" />
 
             <Button
                 android:id="@+id/button3"
@@ -105,23 +117,29 @@
                 android:id="@+id/button2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:background="#5B94F8"
                 android:paddingLeft="10sp"
                 android:paddingRight="10sp"
                 android:text="2 local file storage"
-                tools:layout_editor_absoluteX="232dp"
-                tools:layout_editor_absoluteY="451dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button11" />
 
             <Button
                 android:id="@+id/button6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
                 android:background="#F801A522"
                 android:paddingLeft="10sp"
                 android:paddingRight="10sp"
                 android:text="3 external storage"
-                tools:layout_editor_absoluteX="236dp"
-                tools:layout_editor_absoluteY="675dp" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button8" />
 
             <Button
                 android:id="@+id/button14"
@@ -130,6 +148,8 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
+                android:background="#13B64A"
+                android:onClick="logicStatementsButtonClicked"
                 android:text="1 Logic Statements"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -153,34 +173,43 @@
                 android:id="@+id/button10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:background="#3C925C"
                 android:paddingLeft="10sp"
                 android:paddingRight="10sp"
                 android:text="2 Different Widgets"
-                tools:layout_editor_absoluteX="8dp"
-                tools:layout_editor_absoluteY="373dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button7" />
 
             <Button
                 android:id="@+id/button7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
                 android:background="#FDFFDF43"
                 android:paddingLeft="10sp"
                 android:paddingRight="10sp"
                 android:text="2 pass data between activities"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="313dp" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button3" />
 
             <Button
                 android:id="@+id/button9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
                 android:background="#F0E5FAFA"
                 android:paddingLeft="10sp"
                 android:paddingRight="10sp"
                 android:text="3 Collections Framework"
-                tools:layout_editor_absoluteX="50dp"
-                tools:layout_editor_absoluteY="627dp" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button2" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

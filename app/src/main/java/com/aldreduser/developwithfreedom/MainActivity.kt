@@ -17,6 +17,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
+    fun functionsAndParametersButtonClicked(view: View) {
+        val intent = Intent(this, ::class.java)
+        startActivity(intent)
+    }
+
+    fun logicStatementsButtonClicked(view: View) {
+        val intent = Intent(this, LogicStatementsActivity::class.java)
+        startActivity(intent)
+    }
+
     fun hideAndShowLayoutButtonClicked(view: View) {
         val intent = Intent(this, HideAndShowLayoutActivity::class.java)
         startActivity(intent)
