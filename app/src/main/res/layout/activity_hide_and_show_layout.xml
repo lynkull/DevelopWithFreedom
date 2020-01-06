@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFED66"
-    tools:context=".HideAndShowLayoutActivity">
+    tools:context=".Level_1.HideAndShowLayoutActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

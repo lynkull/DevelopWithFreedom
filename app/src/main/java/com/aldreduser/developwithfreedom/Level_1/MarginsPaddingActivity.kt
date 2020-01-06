@@ -1,7 +1,8 @@
-package com.aldreduser.developwithfreedom
+package com.aldreduser.developwithfreedom.Level_1
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.aldreduser.developwithfreedom.R
 
 class MarginsPaddingActivity : AppCompatActivity() {
 

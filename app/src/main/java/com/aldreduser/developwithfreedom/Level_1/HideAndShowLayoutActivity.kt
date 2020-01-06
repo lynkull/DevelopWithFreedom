@@ -1,10 +1,11 @@
-package com.aldreduser.developwithfreedom
+package com.aldreduser.developwithfreedom.Level_1
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
+import com.aldreduser.developwithfreedom.R
 import kotlinx.android.synthetic.main.activity_hide_and_show_layout.*
 
 class HideAndShowLayoutActivity : AppCompatActivity() {

@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="397dp"
             android:background="#4E36B3"
-            tools:context=".MarginsPaddingActivity">
+            tools:context=".Level_1.MarginsPaddingActivity">
 
             <TextView
                 android:id="@+id/textView4"

@@ -4,6 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.aldreduser.developwithfreedom.Level_1.FunctionsAndParametersActivity
+import com.aldreduser.developwithfreedom.Level_1.HideAndShowLayoutActivity
+import com.aldreduser.developwithfreedom.Level_1.LogicStatementsActivity
+import com.aldreduser.developwithfreedom.Level_1.MarginsPaddingActivity
 
 // use this app to build anything and test your skills
 
@@ -17,15 +21,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    fun functionsAndParametersButtonClicked(view: View) {
-        val intent = Intent(this, ::class.java)
-        startActivity(intent)
-    }
-
     fun logicStatementsButtonClicked(view: View) {
         val intent = Intent(this, LogicStatementsActivity::class.java)
         startActivity(intent)
     }
+    fun functionsAndParametersButtonClicked(view: View) {
+        val intent = Intent(this, FunctionsAndParametersActivity::class.java)
+        startActivity(intent)
+    }
+
+
 
     fun hideAndShowLayoutButtonClicked(view: View) {
         val intent = Intent(this, HideAndShowLayoutActivity::class.java)

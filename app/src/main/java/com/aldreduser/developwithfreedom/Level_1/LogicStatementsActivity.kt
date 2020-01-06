@@ -1,8 +1,8 @@
-package com.aldreduser.developwithfreedom
+package com.aldreduser.developwithfreedom.Level_1
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_logic_statements.*
+import com.aldreduser.developwithfreedom.R
 import java.util.*
 
 class LogicStatementsActivity : AppCompatActivity() {
