@@ -52,6 +52,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
                 android:background="#FF80D4"
+                android:onClick="dropDownMenuButtonClicked"
                 android:paddingLeft="10sp"
                 android:paddingRight="10sp"
                 android:text="1 drop down menu"

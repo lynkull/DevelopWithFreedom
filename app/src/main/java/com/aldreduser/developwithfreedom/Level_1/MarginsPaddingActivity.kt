@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.aldreduser.developwithfreedom.R
 
+// make button round edges
+
 class MarginsPaddingActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

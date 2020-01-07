@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.widget.MenuPopupWindow
 import com.aldreduser.developwithfreedom.Level_1.FunctionsAndParametersActivity
 import com.aldreduser.developwithfreedom.Level_1.HideAndShowLayoutActivity
 import com.aldreduser.developwithfreedom.Level_1.LogicStatementsActivity
@@ -29,7 +30,10 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, FunctionsAndParametersActivity::class.java)
         startActivity(intent)
     }
-
+    fun dropDownMenuButtonClicked(view: View) {
+        val intent = Intent(this, DropDownMenuActivity::class.java)
+        startActivity(intent)
+    }
 
 
     fun hideAndShowLayoutButtonClicked(view: View) {

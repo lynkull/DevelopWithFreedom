@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Level_1.FunctionsAndParametersActivity"></activity>
+        <activity android:name=".DropDownMenuKotlinVersionActivity"></activity>
+        <activity android:name=".DropDownMenuActivity" />
+        <activity android:name=".Level_1.FunctionsAndParametersActivity" />
         <activity android:name=".Level_1.LogicStatementsActivity" />
         <activity android:name=".Level_1.MarginsPaddingActivity" />
         <activity android:name=".Level_1.HideAndShowLayoutActivity" />
