@@ -1,10 +1,11 @@
-package com.aldreduser.developwithfreedom
+package com.aldreduser.developwithfreedom.Level_1
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import com.aldreduser.developwithfreedom.R
 import kotlinx.android.synthetic.main.activity_drop_down_menu.*
 
 // DO NOT USE THIS METHOD, use the one for kotlin
@@ -18,7 +19,8 @@ class DropDownMenuActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
         var spinner:Spinner = spinner1
 
         // (contex, array, layout)
-        var adapter:ArrayAdapter<CharSequence> = ArrayAdapter.createFromResource(this, R.array.numbers, android.R.layout.simple_spinner_item)
+        var adapter:ArrayAdapter<CharSequence> = ArrayAdapter.createFromResource(this,
+            R.array.numbers, android.R.layout.simple_spinner_item)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner.adapter = adapter
 

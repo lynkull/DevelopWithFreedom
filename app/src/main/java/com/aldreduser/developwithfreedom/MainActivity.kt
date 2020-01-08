@@ -4,11 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.widget.MenuPopupWindow
-import com.aldreduser.developwithfreedom.Level_1.FunctionsAndParametersActivity
-import com.aldreduser.developwithfreedom.Level_1.HideAndShowLayoutActivity
-import com.aldreduser.developwithfreedom.Level_1.LogicStatementsActivity
-import com.aldreduser.developwithfreedom.Level_1.MarginsPaddingActivity
+import com.aldreduser.developwithfreedom.Level_1.*
 
 // use this app to build anything and test your skills
 

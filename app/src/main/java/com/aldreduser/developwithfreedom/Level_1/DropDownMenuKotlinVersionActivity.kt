@@ -1,10 +1,11 @@
-package com.aldreduser.developwithfreedom
+package com.aldreduser.developwithfreedom.Level_1
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import com.aldreduser.developwithfreedom.R
 import kotlinx.android.synthetic.main.activity_drop_down_menu_kotlin_version.*
 
 //spinner2 wasn't used in the code so idk how that still works
@@ -19,7 +20,8 @@ class DropDownMenuKotlinVersionActivity : AppCompatActivity() {
         setContentView(R.layout.activity_drop_down_menu_kotlin_version)
 
         //create an ArrayAdapter
-        val adapter = ArrayAdapter.createFromResource(this, R.array.city_list, android.R.layout.simple_spinner_item)
+        val adapter = ArrayAdapter.createFromResource(this,
+            R.array.city_list, android.R.layout.simple_spinner_item)
 
         //specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
