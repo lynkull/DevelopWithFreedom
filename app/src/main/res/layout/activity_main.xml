@@ -69,9 +69,10 @@
             android:id="@+id/button7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8sp"
             android:layout_gravity="right"
+            android:layout_marginTop="8sp"
             android:background="#FDFFDF43"
+            android:onClick="passDataToActivityClicked"
             android:paddingLeft="10sp"
             android:paddingRight="10sp"
             android:text="2. pass data between activities" />
@@ -90,12 +91,13 @@
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8sp"
             android:layout_gravity="right"
+            android:layout_marginTop="8sp"
             android:background="#5B94F8"
+            android:onClick="localFileStorageClicked"
             android:paddingLeft="10sp"
             android:paddingRight="10sp"
-            android:text="!2. local file storage" />
+            android:text="2. local file storage" />
 
         <Button
             android:id="@+id/button12"

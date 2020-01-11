@@ -1,14 +1,13 @@
-package com.aldreduser.developwithfreedom.Level_2.Pass_Data_To_Activity_Package
+package com.aldreduser.developwithfreedom.Level_2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import com.aldreduser.developwithfreedom.R
 
-class ArrayBeingPassedActivity : AppCompatActivity() {
+class LocalStorageActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_array_being_passed)
+        setContentView(R.layout.activity_local_storage)
     }
 }

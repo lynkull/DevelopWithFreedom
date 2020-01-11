@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#578BEE"
-    tools:context=".Level_2.PassDataToActivityActivity">
+    tools:context=".Level_2.Pass_Data_To_Activity_Package.PassDataToActivityActivity">
 
     <TextView
         android:id="@+id/textView18"

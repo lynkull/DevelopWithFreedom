@@ -5,11 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.aldreduser.developwithfreedom.Level_1.*
+import com.aldreduser.developwithfreedom.Level_2.LocalStorageActivity
+import com.aldreduser.developwithfreedom.Level_2.Pass_Data_To_Activity_Package.PassDataToActivityActivity
 
 // use this app to build anything and test your skills
-
-// also do a drop down menu
-// file storage PrintStream(openFIleOutput("out.txt", MODE_PRIVATE))
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,7 +16,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
-
+    fun hideAndShowLayoutButtonClicked(view: View) {
+        val intent = Intent(this, HideAndShowLayoutActivity::class.java)
+        startActivity(intent)
+    }
     fun logicStatementsButtonClicked(view: View) {
         val intent = Intent(this, LogicStatementsActivity::class.java)
         startActivity(intent)
@@ -26,21 +28,28 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, FunctionsAndParametersActivity::class.java)
         startActivity(intent)
     }
+    fun marginsPaddingButtonCicked(view: View) {
+        val intent = Intent(this, MarginsPaddingActivity::class.java)
+        startActivity(intent)
+    }
     fun dropDownMenuButtonClicked(view: View) {
         val intent = Intent(this, DropDownMenuActivity::class.java)
         startActivity(intent)
     }
 
-
-    fun hideAndShowLayoutButtonClicked(view: View) {
-        val intent = Intent(this, HideAndShowLayoutActivity::class.java)
-        startActivity(intent)
-    }
-    fun marginsPaddingButtonCicked(view: View) {
-        val intent = Intent(this, MarginsPaddingActivity::class.java)
+    fun passDataToActivityClicked(view: View) {
+        val intent = Intent(this, PassDataToActivityActivity::class.java)
         startActivity(intent)
     }
 
 
+
+    fun localFileStorageClicked(view: View) {
+        val intent = Intent(this, LocalStorageActivity::class.java)
+        startActivity(intent)
+    }
+
+
+    // file storage PrintStream(openFIleOutput("out.txt", MODE_PRIVATE))
     // for file storage can use buffer reader or scanner
 }

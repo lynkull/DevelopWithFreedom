@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Level_2.Pass_Data_To_Activity_Package.ArrayBeingPassedActivity"></activity>
+        <activity android:name=".Level_2.LocalStorageActivity"></activity>
+        <activity android:name=".Level_2.Pass_Data_To_Activity_Package.ArrayBeingPassedActivity" />
         <activity android:name=".Level_2.Pass_Data_To_Activity_Package.ExplicitIntentActivity" />
         <activity android:name=".Level_2.Pass_Data_To_Activity_Package.TestActivityOne" />
-        <activity android:name=".Level_2.PassDataToActivityActivity" />
+        <activity android:name=".Level_2.Pass_Data_To_Activity_Package.PassDataToActivityActivity" />
         <activity android:name=".Level_1.DropDownMenuKotlinVersionActivity" />
         <activity android:name=".Level_1.DropDownMenuActivity" />
         <activity android:name=".Level_1.FunctionsAndParametersActivity" />
