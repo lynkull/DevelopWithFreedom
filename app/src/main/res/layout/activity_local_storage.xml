@@ -1,35 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Level_2.LocalStorageActivity">
-
-    <EditText
-        android:id="@+id/edit_text"
-        android:layout_width="match_parent"
-        android:layout_height="200dp" />
+    android:background="#268061"
+    tools:context=".Level_2.Storage_Package.LocalStorageActivity">
 
     <Button
-        android:id="@+id/button_save"
+        android:id="@+id/button18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/edit_text"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:text="save"
-        android:onClick="save"/>
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="textFileStorageJavaClicked"
+        android:text="text strg Java v."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="OnClick" />
 
     <Button
-        android:id="@+id/button_load"
+        android:id="@+id/button19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button_save"
-        android:layout_alignStart="@+id/button_save"
-        android:layout_alignLeft="@+id/button_save"
-        android:layout_marginTop="16dp"
-        android:text="load"
-        android:onClick="load"/>
-
-</RelativeLayout>
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Shared Preferences"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button18" />
+</androidx.constraintlayout.widget.ConstraintLayout>

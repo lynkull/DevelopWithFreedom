@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.aldreduser.developwithfreedom.Level_1.*
-import com.aldreduser.developwithfreedom.Level_2.LocalStorageActivity
+import com.aldreduser.developwithfreedom.Level_2.Storage_Package.LocalStorageActivity
 import com.aldreduser.developwithfreedom.Level_2.Pass_Data_To_Activity_Package.PassDataToActivityActivity
 
 // use this app to build anything and test your skills
