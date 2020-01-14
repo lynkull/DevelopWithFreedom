@@ -41,4 +41,8 @@ class LocalStorageActivity : AppCompatActivity() {
         val intent = Intent(this, TextStorageJavaActivity::class.java)
         startActivity(intent)
     }
+    fun sharedPreferencesButtonClicked(view: View) {
+        val intent = Intent(this, SharedPreferenceActivity::class.java)
+        startActivity(intent)
+    }
 }
