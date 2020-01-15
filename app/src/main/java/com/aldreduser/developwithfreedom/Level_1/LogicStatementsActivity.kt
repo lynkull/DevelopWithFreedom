@@ -9,7 +9,7 @@ class LogicStatementsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_logic_statements)
+        setContentView(R.layout.level1_activity_logic_statements)
         Thread.sleep(1000) // one second pause
     }
 

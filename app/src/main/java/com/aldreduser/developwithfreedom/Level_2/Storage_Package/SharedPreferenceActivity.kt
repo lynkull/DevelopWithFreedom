@@ -1,9 +1,11 @@
 package com.aldreduser.developwithfreedom.Level_2.Storage_Package
 
 import android.content.Context
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.aldreduser.developwithfreedom.R
+import kotlinx.android.synthetic.main.activity_shared_preference.*
 
 // shared preference
 /*
@@ -18,26 +20,41 @@ get and put files from sharedPreferences
 
  */
 
-class SharedPreferenceActivity(context: Context) : AppCompatActivity() {
+//in this app, the count goes up when a user opens the app
+//https://www.youtube.com/watch?v=Fr5nNnJUlo4&t=198s
 
-    val PREFERENCE_NAME = "SharedPreferenceExampleOne"  // this is the key
-    val PREFERENCE_LOGIN_COUNT = "LoginCount"
-    val preference = context.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE)
+/*
+ITS BETTER TO HAVE AN INDEPENDENT CLASS FOR getSharedPreferences()
+ */
+
+class SharedPreferenceActivity() : AppCompatActivity() {
+
+    val PREFERENCE_NAME = "SharedPreferenceExampleOne"  // this is the name of the preference file
+    val PREFERENCE_LOGIN_COUNT = "LoginCount"       //
+    var preference:SharedPreferences? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shared_preference)
+
+        preference = this.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE)
+
+        var loginCount = getLoginCount()
+        loginCount++
+        setLoginCount(loginCount)
+        tv_count.text = loginCount.toString()
     }
 
-    /*fun multiplePreferences() {
-        val PREFERENCE_NAME = "SharedPreferenceExampleOne"  // this is the key
-        val PREFERENCE_LOGIN_COUNT = "LoginCount"
-    }*/
-
+    // retrieve a value from sharedPreferences
     fun getLoginCount() : Int {
-        return preference.getInt(PREFERENCE_LOGIN_COUNT, 0)
+        var value = preference!!.getInt(PREFERENCE_LOGIN_COUNT, 0)      //might be null
+        return value
     }
+
+    // save a value to sharedPreferences
     fun setLoginCount(count:Int) {
-        val editor = 
+        val editor = preference!!.edit()        //I guess you need an editor to change it
+        editor.putInt(PREFERENCE_LOGIN_COUNT, count)
+        editor.apply()      //close the editor
     }
 }
