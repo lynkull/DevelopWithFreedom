@@ -4,6 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#8634A3"
     tools:context=".Level_2.Storage_Package.GetPreferencesActivity">
 
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Enter Text to Save"
+        android:textColor="#F1F1F1"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/textBoxToSave"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/textBoxToSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:hint="enter text"
+        android:inputType="textPersonName"
+        android:textColor="#CFCFCF"
+        android:textColorHint="#8AEBEBEB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+    <Button
+        android:id="@+id/button21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="saveButtonClicked"
+        android:text="Save"
+        app:layout_constraintEnd_toEndOf="@+id/textBoxToSave"
+        app:layout_constraintTop_toBottomOf="@+id/textBoxToSave" />
+
+    <Button
+        android:id="@+id/button22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="loadButtonClicked"
+        android:text="Load"
+        app:layout_constraintStart_toStartOf="@+id/textBoxToSave"
+        app:layout_constraintTop_toBottomOf="@+id/textBoxToSave" />
 </androidx.constraintlayout.widget.ConstraintLayout>

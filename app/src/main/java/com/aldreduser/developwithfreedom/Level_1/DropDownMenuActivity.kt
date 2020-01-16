@@ -33,6 +33,7 @@ class DropDownMenuActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
         Toast.makeText(parent.context, text, Toast.LENGTH_SHORT).show()
     }
 
+
     override fun onNothingSelected(parent: AdapterView<*>?) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
