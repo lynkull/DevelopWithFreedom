@@ -10,7 +10,7 @@ class PassDataToActivityActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_pass_data_to_activity)
+        setContentView(R.layout.level2_activity_pass_data_to_activity)
     }
 
     fun testActivityOneClicked(view: View) {

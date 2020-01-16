@@ -8,7 +8,7 @@ class TestActivityOne : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_test_one)
+        setContentView(R.layout.level2_activity_test_one)
 
         // change nav bar title
         var navBarTitle = intent.getStringExtra("thisnamething")

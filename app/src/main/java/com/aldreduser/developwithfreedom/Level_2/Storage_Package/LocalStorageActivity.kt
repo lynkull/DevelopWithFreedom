@@ -34,11 +34,14 @@ class LocalStorageActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_local_storage)
+        setContentView(R.layout.level2_activity_local_storage)
     }
-
     fun textFileStorageJavaClicked(view: View) {
         val intent = Intent(this, TextStorageJavaActivity::class.java)
+        startActivity(intent)
+    }
+    fun getPreferencesButtonClicked(view: View) {
+        val intent = Intent(this, GetPreferencesActivity::class.java)
         startActivity(intent)
     }
     fun sharedPreferencesButtonClicked(view: View) {
