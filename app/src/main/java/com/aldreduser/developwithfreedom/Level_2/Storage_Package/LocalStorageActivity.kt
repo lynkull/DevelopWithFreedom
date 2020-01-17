@@ -21,13 +21,9 @@ import com.aldreduser.developwithfreedom.R
 -Databases: Store structured data in a private database using the Room persistence library.
 
 
-
-
 tips:
 -Don't open and close files repeatedly (for performance)
 */
-
-
 
 
 class LocalStorageActivity : AppCompatActivity() {
@@ -46,6 +42,10 @@ class LocalStorageActivity : AppCompatActivity() {
     }
     fun sharedPreferencesButtonClicked(view: View) {
         val intent = Intent(this, SharedPreferenceActivity::class.java)
+        startActivity(intent)
+    }
+    fun appSpecificStorageClicked(view: View) {
+        val intent = Intent(this, AppSpecificStorage)
         startActivity(intent)
     }
 }
