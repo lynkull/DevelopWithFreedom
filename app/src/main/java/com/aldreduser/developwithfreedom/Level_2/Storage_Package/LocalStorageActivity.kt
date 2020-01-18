@@ -45,7 +45,7 @@ class LocalStorageActivity : AppCompatActivity() {
         startActivity(intent)
     }
     fun appSpecificStorageClicked(view: View) {
-        val intent = Intent(this, AppSpecificStorage)
+        val intent = Intent(this, AppSpecificStorage::class.java)
         startActivity(intent)
     }
 }
