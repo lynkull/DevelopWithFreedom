@@ -4,13 +4,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.aldreduser.developwithfreedom.R
 
-//file storage (do this later)
-//https://developer.android.com/training/data-storage/app-specific
+// SQL database storage (do this later)
 
-class AppSpecificStorage : AppCompatActivity() {
+class StorageSQLActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.level2_activity_app_specific_storage)
+        setContentView(R.layout.level2_activity_storage_sql)
     }
 }

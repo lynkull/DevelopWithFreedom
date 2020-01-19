@@ -97,7 +97,7 @@
             android:onClick="localFileStorageClicked"
             android:paddingLeft="10sp"
             android:paddingRight="10sp"
-            android:text="2. local file storage" />
+            android:text="2. file storage" />
 
         <Button
             android:id="@+id/button12"
