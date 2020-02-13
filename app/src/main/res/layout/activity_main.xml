@@ -55,6 +55,12 @@
             android:text="1. Margins, Padding, and More" />
 
         <Button
+            android:id="@+id/button26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="!1. Vector Assets" />
+
+        <Button
             android:id="@+id/button5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -122,6 +128,18 @@
             android:text="!2,3 Context" />
 
         <Button
+            android:id="@+id/button28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="!3. Companion Object" />
+
+        <Button
+            android:id="@+id/button25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="!3. Nav Bar" />
+
+        <Button
             android:id="@+id/button11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -132,22 +150,12 @@
             android:text="!2,3 Notification" />
 
         <Button
-            android:id="@+id/button9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8sp"
-            android:layout_gravity="right"
-            android:background="#F0E5FAFA"
-            android:paddingLeft="10sp"
-            android:paddingRight="10sp"
-            android:text="!3. Collections Framework" />
-
-        <Button
             android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8sp"
             android:background="#F76A6A"
+            android:onClick="recyclerViewCLicked"
             android:paddingLeft="10sp"
             android:paddingRight="10sp"
             android:text="!3. recycler view" />
@@ -162,6 +170,23 @@
             android:paddingLeft="10sp"
             android:paddingRight="10sp"
             android:text="!3. external storage" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="8sp"
+            android:background="#F0E5FAFA"
+            android:paddingLeft="10sp"
+            android:paddingRight="10sp"
+            android:text="!4. Collections Framework" />
+
+        <Button
+            android:id="@+id/button27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="!24 Background Tasks" />
 
     </LinearLayout>
 

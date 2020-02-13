@@ -15,9 +15,7 @@ class PassDataToActivityActivity : AppCompatActivity() {
 
     fun testActivityOneClicked(view: View) {
         var intent = Intent(this, TestActivityOne::class.java)
-
         intent.putExtra("thisnamething", "COURSETITLEOBJECTTOPASS")
-
         startActivity(intent)
     }
 

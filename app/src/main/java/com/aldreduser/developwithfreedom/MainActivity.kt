@@ -7,6 +7,7 @@ import android.view.View
 import com.aldreduser.developwithfreedom.Level_1.*
 import com.aldreduser.developwithfreedom.Level_2.Storage_Package.LocalStorageActivity
 import com.aldreduser.developwithfreedom.Level_2.Pass_Data_To_Activity_Package.PassDataToActivityActivity
+import com.aldreduser.developwithfreedom.Level_3.RecyclerViewActivity
 
 // use this app to build anything and test your skills
 
@@ -47,9 +48,15 @@ class MainActivity : AppCompatActivity() {
     fun localFileStorageClicked(view: View) {
         val intent = Intent(this, LocalStorageActivity::class.java)
         startActivity(intent)
+    }// file storage PrintStream(openFIleOutput("out.txt", MODE_PRIVATE))
+    // for file storage can use buffer reader or scanner
+
+
+
+
+    fun recyclerViewCLicked(view: View) {
+        val intent = Intent(this, RecyclerViewActivity::class.java)
+        startActivity(intent)
     }
 
-
-    // file storage PrintStream(openFIleOutput("out.txt", MODE_PRIVATE))
-    // for file storage can use buffer reader or scanner
 }
