@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Level_3.BetterRecyclerView2"></activity>
+        <activity android:name=".Level_1.ProgramaticLayoutActivity"></activity>
+        <activity android:name=".Level_3.BetterRecyclerView2" />
         <activity android:name=".Level_3.RecyclerViewActivity" />
         <activity android:name=".Level_2.Storage_Package.StorageSQLActivity" />
         <activity android:name=".Level_2.Storage_Package.AppSpecificStorage" />

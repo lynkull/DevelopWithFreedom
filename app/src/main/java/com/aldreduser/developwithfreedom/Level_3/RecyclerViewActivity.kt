@@ -8,11 +8,18 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.aldreduser.developwithfreedom.R
 import kotlinx.android.synthetic.main.level3_activity_recycler_view.*
 
-// made a drawable xml, and level3_recyclerview_item1.xml
+/*
+recyclervie has:
+-mainFile
+-Main xml layout
+-item xml layout
+-adapter file
+ */
+
 
 class RecyclerViewActivity : AppCompatActivity() {
-    var textx:ArrayList<String> = ArrayList()
-    var images:ArrayList<Int> = ArrayList()
+    private var textx:ArrayList<String> = ArrayList()
+    private var images:ArrayList<Int> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +50,4 @@ class RecyclerViewActivity : AppCompatActivity() {
         textx.add("Text 8")
         images.add(R.drawable.ic_launcher_background)
     }
-
-
 }

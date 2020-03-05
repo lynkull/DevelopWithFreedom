@@ -18,7 +18,7 @@ class HideAndShowLayoutActivity : AppCompatActivity() {
             var hiddenLayout = hidden_layout  // try to make this private
 
             if(hiddenLayout.isGone){
-                hiddenLayout.setVisibility(View.VISIBLE)
+                hiddenLayout.visibility = View.VISIBLE
             } else if(!hiddenLayout.isGone) {
                 hiddenLayout.setVisibility(View.GONE)
             }

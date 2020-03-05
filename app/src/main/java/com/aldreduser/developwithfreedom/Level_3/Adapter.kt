@@ -8,12 +8,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.aldreduser.developwithfreedom.R
 import kotlinx.android.synthetic.main.level3_recyclerview_item.view.*
 
-class Adapter(val nContext:Context, val textx:ArrayList<String>, val images:ArrayList<Int>): RecyclerView.Adapter<Adapter.viewHolder>() {
+class Adapter(val nContext:Context,
+              val textx:ArrayList<String>,
+              val images:ArrayList<Int>): RecyclerView.Adapter<Adapter.viewHolder>() {
 
     //this method is returning the view for each item in the list
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolder {
-        val layoutInflater = LayoutInflater.from(parent.context)
-        val callForRow = layoutInflater.inflate(R.layout.level3_recyclerview_item, parent, false)
+        val inflater = LayoutInflater.from(parent.context)
+        val callForRow = inflater.inflate(R.layout.level3_recyclerview_item, parent, false)
         return viewHolder(callForRow)
     }
 
