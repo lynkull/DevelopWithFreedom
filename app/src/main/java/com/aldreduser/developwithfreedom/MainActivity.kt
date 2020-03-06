@@ -33,6 +33,10 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, MarginsPaddingActivity::class.java)
         startActivity(intent)
     }
+    fun popUpDialogButtonClicked(view: View) {
+        val intent = Intent(this, PopUpDialog::class.java)
+        startActivity(intent)
+    }
     fun dropDownMenuButtonClicked(view: View) {
         val intent = Intent(this, DropDownMenuActivity::class.java)
         startActivity(intent)

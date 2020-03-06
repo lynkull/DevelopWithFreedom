@@ -61,6 +61,14 @@
             android:text="!1. Vector Assets" />
 
         <Button
+            android:id="@+id/popUpDialogButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:onClick="popUpDialogButtonClicked"
+            android:text="1. Pop-Up Dialog" />
+
+        <Button
             android:id="@+id/button5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

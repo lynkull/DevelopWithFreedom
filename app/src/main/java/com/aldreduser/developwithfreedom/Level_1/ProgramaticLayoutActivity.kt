@@ -55,7 +55,7 @@ class ProgramaticLayoutActivity : AppCompatActivity() {
         val flag = layoutInflater.inflate(R.layout.level1_flag, null)
         val image = flag.findViewById<TextView>(R.id.flag_image)
         image.setOnClickListener {
-            
+
         }
         val countryNameView = flag.findViewById<TextView>(R.id.country_name)
         val visitedBox = flag.findViewById<CheckBox>(R.id.visited_box)

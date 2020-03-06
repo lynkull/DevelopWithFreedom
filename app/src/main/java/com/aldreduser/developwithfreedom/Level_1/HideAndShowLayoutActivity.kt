@@ -1,5 +1,6 @@
 package com.aldreduser.developwithfreedom.Level_1
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -15,7 +16,7 @@ class HideAndShowLayoutActivity : AppCompatActivity() {
         setContentView(R.layout.activity_hide_and_show_layout)
 
         toggle_text_button.setOnLongClickListener {
-            var hiddenLayout = hidden_layout  // try to make this private
+            val hiddenLayout = hidden_layout  // try to make this private
 
             if(hiddenLayout.isGone){
                 hiddenLayout.visibility = View.VISIBLE
@@ -23,6 +24,11 @@ class HideAndShowLayoutActivity : AppCompatActivity() {
                 hiddenLayout.setVisibility(View.GONE)
             }
             return@setOnLongClickListener true
+        }
+
+        programaticallyButton.setOnClickListener {
+            val intent = Intent(this, ProgramaticLayoutActivity::class.java)
+            startActivity(intent)
         }
     }
 
