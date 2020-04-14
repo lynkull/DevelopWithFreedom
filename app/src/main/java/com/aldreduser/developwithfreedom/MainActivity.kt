@@ -7,7 +7,8 @@ import android.view.View
 import com.aldreduser.developwithfreedom.Level_1.*
 import com.aldreduser.developwithfreedom.Level_2.Storage_Package.LocalStorageActivity
 import com.aldreduser.developwithfreedom.Level_2.Pass_Data_To_Activity_Package.PassDataToActivityActivity
-import com.aldreduser.developwithfreedom.Level_3.RecyclerViewActivity
+import com.aldreduser.developwithfreedom.Level_3.Level_3.recyclerview.recyclerview.RecyclerHomeScreen
+import com.aldreduser.developwithfreedom.Level_3.Level_3.recyclerview.recyclerview.recycler1.RecyclerView1
 
 // use this app to build anything and test your skills
 
@@ -59,7 +60,7 @@ class MainActivity : AppCompatActivity() {
 
 
     fun recyclerViewCLicked(view: View) {
-        val intent = Intent(this, RecyclerViewActivity::class.java)
+        val intent = Intent(this, RecyclerHomeScreen::class.java)
         startActivity(intent)
     }
 

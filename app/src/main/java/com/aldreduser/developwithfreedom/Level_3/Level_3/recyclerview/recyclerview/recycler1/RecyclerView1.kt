@@ -1,12 +1,11 @@
-package com.aldreduser.developwithfreedom.Level_3
+package com.aldreduser.developwithfreedom.Level_3.Level_3.recyclerview.recyclerview.recycler1
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.aldreduser.developwithfreedom.Level_3.Level_3.recyclerview.recyclerview.recycler1.Adapter1
 import com.aldreduser.developwithfreedom.R
-import kotlinx.android.synthetic.main.level3_activity_recycler_view.*
+import kotlinx.android.synthetic.main.level3_activity_recycler_view1.*
 
 /*
 recyclervie has:
@@ -16,17 +15,21 @@ recyclervie has:
 -adapter file
  */
 
-
-class RecyclerViewActivity : AppCompatActivity() {
+class RecyclerView1 : AppCompatActivity() {
     private var textx:ArrayList<String> = ArrayList()
     private var images:ArrayList<Int> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.level3_activity_recycler_view)
+        setContentView(R.layout.level3_activity_recycler_view1)
 
         loadData()
-        val adapter = Adapter(this, textx, images)
+        val adapter =
+            Adapter1(
+                this,
+                textx,
+                images
+            )
 
         recycler.layoutManager = LinearLayoutManager(this)
         recycler.adapter = adapter

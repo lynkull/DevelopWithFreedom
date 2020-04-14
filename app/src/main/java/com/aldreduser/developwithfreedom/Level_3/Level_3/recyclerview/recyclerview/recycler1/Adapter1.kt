@@ -1,4 +1,4 @@
-package com.aldreduser.developwithfreedom.Level_3
+package com.aldreduser.developwithfreedom.Level_3.Level_3.recyclerview.recyclerview.recycler1
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,17 +6,19 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.aldreduser.developwithfreedom.R
-import kotlinx.android.synthetic.main.level3_recyclerview_item.view.*
+import kotlinx.android.synthetic.main.level3_recyclerview_item1.view.*
 
-class Adapter(val nContext:Context,
-              val textx:ArrayList<String>,
-              val images:ArrayList<Int>): RecyclerView.Adapter<Adapter.viewHolder>() {
+class Adapter1(val nContext:Context,
+               val textx:ArrayList<String>,
+               val images:ArrayList<Int>): RecyclerView.Adapter<Adapter1.viewHolder>() {
 
     //this method is returning the view for each item in the list
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val callForRow = inflater.inflate(R.layout.level3_recyclerview_item, parent, false)
-        return viewHolder(callForRow)
+        val callForRow = inflater.inflate(R.layout.level3_recyclerview_item1, parent, false)
+        return viewHolder(
+            callForRow
+        )
     }
 
     //this method is binding the data on the list

@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E45A5A"
-    tools:context=".Level_3.RecyclerViewActivity">
+    tools:context=".Level_3.Level_3.recyclerview.recyclerview.recycler2.RecyclerView2">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_view2">
+    </androidx.recyclerview.widget.RecyclerView>
 </RelativeLayout>

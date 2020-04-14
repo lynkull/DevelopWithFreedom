@@ -9,10 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Level_1.PopUpDialog"></activity>
+        <activity android:name=".Level_3.Level_3.recyclerview.recyclerview.RecyclerHomeScreen"></activity>
+        <activity android:name=".Level_3.Level_3.recyclerview.recyclerview.recycler2.RecyclerView2" />
+        <activity android:name=".Level_3.Level_3.PlaceHolder" />
+        <activity android:name=".Level_1.PopUpDialog" />
         <activity android:name=".Level_1.ProgramaticLayoutActivity" />
-        <activity android:name=".Level_3.BetterRecyclerView2" />
-        <activity android:name=".Level_3.RecyclerViewActivity" />
+        <activity android:name=".Level_3.Level_3.recyclerview.recyclerview.recycler1.RecyclerView1" />
         <activity android:name=".Level_2.Storage_Package.StorageSQLActivity" />
         <activity android:name=".Level_2.Storage_Package.AppSpecificStorage" />
         <activity android:name=".Level_2.Storage_Package.GetPreferencesActivity" />
@@ -20,7 +22,6 @@
         <activity android:name=".Level_2.Storage_Package.TextStorageJavaActivity" />
         <activity android:name=".Level_2.Storage_Package.LocalStorageActivity" />
         <activity android:name=".Level_2.Pass_Data_To_Activity_Package.ArrayBeingPassedActivity" />
-        <activity android:name=".Level_2.Pass_Data_To_Activity_Package.ExplicitIntentActivity" />
         <activity android:name=".Level_2.Pass_Data_To_Activity_Package.TestActivityOne" />
         <activity android:name=".Level_2.Pass_Data_To_Activity_Package.PassDataToActivityActivity" />
         <activity android:name=".Level_1.DropDownMenuKotlinVersionActivity" />
