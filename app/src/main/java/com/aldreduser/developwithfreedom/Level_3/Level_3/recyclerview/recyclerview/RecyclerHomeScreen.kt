@@ -8,6 +8,18 @@ import com.aldreduser.developwithfreedom.Level_3.Level_3.recyclerview.recyclervi
 import com.aldreduser.developwithfreedom.Level_3.Level_3.recyclerview.recyclerview.recycler2.RecyclerView2
 import com.aldreduser.developwithfreedom.R
 
+/*
+recyclerview has:
+-mainFile
+-Main xml layout
+-item xml layout
+-adapter file
+ */
+/*
+with onclicklistener (best practice):
+-there should be an interface inside ViewHolder in the Adapter
+ */
+
 class RecyclerHomeScreen : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

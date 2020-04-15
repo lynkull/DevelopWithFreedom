@@ -8,11 +8,15 @@ import com.aldreduser.developwithfreedom.R
 import kotlinx.android.synthetic.main.level3_activity_recycler_view1.*
 
 /*
-recyclervie has:
+recyclerview has:
 -mainFile
 -Main xml layout
 -item xml layout
 -adapter file
+ */
+/*
+with onclicklistener (best practice):
+-there should be an interface inside ViewHolder in the Adapter
  */
 
 class RecyclerView1 : AppCompatActivity() {
