@@ -25,4 +25,14 @@
         android:onClick="recyclerTwoClicked"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recycler1_button" />
+
+    <Button
+        android:id="@+id/button29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="recyclerThreeClicked"
+        android:text="Recycler 3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler2_button" />
 </androidx.constraintlayout.widget.ConstraintLayout>

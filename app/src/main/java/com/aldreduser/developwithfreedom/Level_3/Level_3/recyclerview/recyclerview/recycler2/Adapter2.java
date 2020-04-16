@@ -5,10 +5,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 import com.aldreduser.developwithfreedom.R;
 import java.util.ArrayList;
@@ -17,24 +18,32 @@ public class Adapter2 extends RecyclerView.Adapter<Adapter2.ViewHolder> {
 
     private static final String TAG = "Adapter2"; //for debugging
 
-    private ArrayList<String> mImageNames = new ArrayList<>();
-    private ArrayList<String> mImages = new ArrayList<>();
     private Context mContext;
-    private OnNoteListener mOnNoteListener;
+    private ArrayList<String> mTexts = new ArrayList<>();
+    private ArrayList<Integer> mImages = new ArrayList<>();
+    private OnImageListener mOnImageListener;
+    private int tempNumber = 0; //used to number the texts
 
-    public Adapter2(Context context, ArrayList<String> imageNames, ArrayList<String> images, OnNoteListener onNoteListener) {
-        mImageNames = imageNames;
+//    public Adapter2(Context context, ArrayList<String> imageTexts, ArrayList<Integer> images, OnImageListener onImageListener) {
+//        mTexts = imageTexts;
+//        mImages = images;
+//
+//        mContext = context;
+//        this.mOnImageListener = onImageListener;
+//    }
+    public Adapter2(ArrayList<String> imageTexts, ArrayList<Integer> images, OnImageListener onImageListener) {
+        mTexts = imageTexts;
         mImages = images;
-        mContext = context;
-        this.mOnNoteListener = onNoteListener;
+
+        this.mOnImageListener = onImageListener;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         //inflates the view
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.level3_recyclerview_item2, parent, false);
-        ViewHolder holder = new ViewHolder(view, mOnNoteListener);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.level3_recyclerview_item1, parent, false);
+        ViewHolder holder = new ViewHolder(view, mOnImageListener);  //bug: mOnImageListener might be the problem
         return holder;
     }
 
@@ -44,8 +53,8 @@ public class Adapter2 extends RecyclerView.Adapter<Adapter2.ViewHolder> {
 
         Log.d(TAG, "onBindViewHolder: called.");    //for debugging
 
-        holder.image.setText("this image name");
-        holder.imageName.setText("this image name");
+        tempNumber++;
+        holder.imageName.setText("Image number " + tempNumber);
 
         // inefficient way of setting an onclick listener
 //        holder.parentLayout.setOnClickListener(new View.OnClickListener() {
@@ -60,34 +69,35 @@ public class Adapter2 extends RecyclerView.Adapter<Adapter2.ViewHolder> {
 
     @Override
     public int getItemCount() {
-        // how many list items are in the list
-        return mImageNames.size();
+        // how many list items are in the recyclerView
+        return mTexts.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         //ViewHolder holds the widgets in memory of each entry
 
         //each widget in the item layout
-        TextView image;
+        ImageView image;
         TextView imageName;
-        RelativeLayout parentLayout;
-        OnNoteListener onNoteClicked;
-        public ViewHolder(@NonNull View itemView, OnNoteListener onNoteListener) {
+        CardView parentLayout;
+        OnImageListener onImageListener;
+        public ViewHolder(@NonNull View itemView, OnImageListener onImageListener) {
             super(itemView);
-            image = itemView.findViewById(R.id.image);
-            imageName = itemView.findViewById(R.id.image_name);
+            image = itemView.findViewById(R.id.images);
+            imageName = itemView.findViewById(R.id.texts);
             parentLayout = itemView.findViewById(R.id.parent_layout);
+            this.onImageListener = onImageListener;
 
             itemView.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View v) {
-            onNoteClicked.onNoteClick(getAdapterPosition());
+            //todo: bug: problem might be here (i think its comming up as null)
+            onImageListener.onImageClick(getAdapterPosition());
         }
     }
-     public interface OnNoteListener{
-        void onNoteClick(int position);
+     public interface OnImageListener {
+        void onImageClick(int position);
      }
-
 }

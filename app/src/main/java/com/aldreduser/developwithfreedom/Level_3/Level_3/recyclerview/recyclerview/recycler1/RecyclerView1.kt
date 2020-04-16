@@ -28,18 +28,14 @@ class RecyclerView1 : AppCompatActivity() {
         setContentView(R.layout.level3_activity_recycler_view1)
 
         loadData()
-        val adapter =
-            Adapter1(
-                this,
-                textx,
-                images
-            )
+        val adapter = Adapter1(this, textx, images)
 
         recycler.layoutManager = LinearLayoutManager(this)
         recycler.adapter = adapter
     }
 
     private fun loadData() {
+        //have to add the image and the text, if not it crashes
         textx.add("Text 1")
         images.add(R.drawable.ic_launcher_background)
         textx.add("Text 2")

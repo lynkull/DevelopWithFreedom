@@ -17,7 +17,7 @@ recyclerview has:
  */
 /*
 with onclicklistener (best practice):
--there should be an interface inside ViewHolder in the Adapter
+-there should be an OnActionListener interface, and should be called inside ViewHolder in the Adapter
  */
 
 class RecyclerHomeScreen : AppCompatActivity() {
@@ -26,12 +26,15 @@ class RecyclerHomeScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.level3_activity_recycler_home_screen)
     }
-
     fun recyclerOneClicked(view: View){
         val intent = Intent(this, RecyclerView1::class.java)
         startActivity(intent)
     }
     fun recyclerTwoClicked(view: View){
+        val intent = Intent(this, RecyclerView2::class.java)
+        startActivity(intent)
+    }
+    fun recyclerThreeClicked(view: View){
         val intent = Intent(this, RecyclerView2::class.java)
         startActivity(intent)
     }
