@@ -8,10 +8,10 @@ import com.aldreduser.developwithfreedom.R
 
 /* Ways to store data
 
--files on the device
--in key-value pairs
--in a database
--or with other data types
+-SQLite for local
+-SharedPreferences for local and simple things
+-Firebase (or other) for remote. Can be usd with SQLite
+-Files on the device (like .txt)
 
 
 -App-specific storage:  meant for the app's use only, in dedicated directories. Use the

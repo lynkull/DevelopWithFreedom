@@ -26,7 +26,7 @@ public class Adapter2 extends RecyclerView.Adapter<Adapter2.ViewHolder> {
         mImageNames = imageNames;
         mImages = images;
         mContext = context;
-        this.mOnNoteListener = onNoteListener
+        this.mOnNoteListener = onNoteListener;
     }
 
     @NonNull
