@@ -9,10 +9,10 @@ import kotlinx.android.synthetic.main.level3_activity_recycler_view3.*
 
 //this recyclerview listens to clicks on two widgets in each recyclerView item
 
-class RecyclerView3 : AppCompatActivity(), OnImageClickListener {
+class RecyclerView3 : AppCompatActivity() {
     private val mTexts = ArrayList<String>()
     private val mImages = ArrayList<Int>()
-    private val mOnImageClickListener: OnImageClickListener? = null
+//    private val mOnImageClickListener: Adapter3.OnImageListener? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,21 +24,21 @@ class RecyclerView3 : AppCompatActivity(), OnImageClickListener {
 
     private fun initRecyclerView() {
         val recyclerView = recycler_view3
-        val adapter = Adapter3(mTexts, mImages, this)    //image names, image urls, listener interface
+        val adapter = Adapter3(mTexts, mImages)    //image names, image urls, listener interface (this)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
     }
 
-    override fun onImageClick(position: Int) {
-        //what happens when clicked
-        val imagePosition = mImages.get(position)
-        Toast.makeText(this, "Image was clicked at position $position", Toast.LENGTH_LONG).show()
-//        //if you were to make it open a new activity on click
-//        val intent = Intent(this, <name of other activity>::class.java)
-//        startActivity(intent)
-//
-//        //<name of array widget declared as a variable in an array in this class>.get(position)    //if want to access the widget that was selected
-    }
+//    override fun onImageClick(position: Int) {
+//        //what happens when clicked
+//        val imagePosition = mImages.get(position)
+//        Toast.makeText(this, "Image was clicked at position $position", Toast.LENGTH_LONG).show()
+////        //if you were to make it open a new activity on click
+////        val intent = Intent(this, <name of other activity>::class.java)
+////        startActivity(intent)
+////
+////        //<name of array widget declared as a variable in an array in this class>.get(position)    //if want to access the widget that was selected
+//    }
 
     private fun loadData() {
         mTexts.add("Text 1")

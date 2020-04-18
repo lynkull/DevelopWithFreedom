@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
@@ -21,14 +20,14 @@ public class Adapter3 extends RecyclerView.Adapter<Adapter3.ViewHolder> {
 
     private ArrayList<String> mTexts = new ArrayList<>();
     private ArrayList<Integer> mImages = new ArrayList<>();
-    private OnImageListener mOnImageListener;
+    //    private OnImageListener mOnImageListener;
     private int tempNumber = 0; //used to number the texts
 
-    public Adapter3(ArrayList<String> imageTexts, ArrayList<Integer> images, OnImageListener onImageListener) {
+    public Adapter3(ArrayList<String> imageTexts, ArrayList<Integer> images) {
         mTexts = imageTexts;
         mImages = images;
 
-        this.mOnImageListener = onImageListener;
+//        this.mOnImageListener = onImageListener;
     }
 
     @NonNull
@@ -36,7 +35,7 @@ public class Adapter3 extends RecyclerView.Adapter<Adapter3.ViewHolder> {
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         //inflates the view
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.level3_recyclerview_item1, parent, false);
-        ViewHolder holder = new ViewHolder(view, mOnImageListener);
+        ViewHolder holder = new ViewHolder(view);
         return holder;
     }
 
@@ -64,30 +63,41 @@ public class Adapter3 extends RecyclerView.Adapter<Adapter3.ViewHolder> {
         ImageView image;
         TextView imageName;
         CardView parentLayout;
-        OnImageListener onImageListener;
-        public ViewHolder(@NonNull View itemView, OnImageListener onImageListener) {
+
+        //        OnImageListener onImageListener;
+//        OnTextListener onTextListener;
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
             image = itemView.findViewById(R.id.images);
             imageName = itemView.findViewById(R.id.texts);
             parentLayout = itemView.findViewById(R.id.parent_layout);
-            this.onImageListener = onImageListener;
+//            this.onImageListener = onImageListener;
+//            this.onTextListener = onTextListener;
 
             //todo: do something when the image is clicked, and something else when the text is clicked
-            image.setOnClickListener( new View.OnClickListener() {
+            image.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-
+                    imageName.setText("Image clicked.");
                 }
             });
-            imageName.setOnClickListener(this);
+            imageName.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    imageName.setText("Text clicked.");
+                }
+            });
             //itemView.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View v) {
-            onImageListener.onImageClick(getAdapterPosition());
+//            onImageListener.onImageClick(getAdapterPosition());
+//            onTextListener.onTextClick(getAdapterPosition());
         }
     }
-    public interface OnImageListener {
-        void onImageClick(int position);
-    }
+//    public interface OnImageListener {
+//        void onImageClick(int position);
+//    }
+//    public interface OnTextListener {
+//        void onTextClick(int position);
+//    }
 }

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import com.aldreduser.developwithfreedom.Level_3.Level_3.recyclerview.recyclerview.recycler1.RecyclerView1
 import com.aldreduser.developwithfreedom.Level_3.Level_3.recyclerview.recyclerview.recycler2.RecyclerView2
+import com.aldreduser.developwithfreedom.Level_3.Level_3.recyclerview.recyclerview.recycler3.RecyclerView3
 import com.aldreduser.developwithfreedom.R
 
 /*
@@ -35,7 +36,7 @@ class RecyclerHomeScreen : AppCompatActivity() {
         startActivity(intent)
     }
     fun recyclerThreeClicked(view: View){
-        val intent = Intent(this, RecyclerView2::class.java)
+        val intent = Intent(this, RecyclerView3::class.java)
         startActivity(intent)
     }
 }
