@@ -10,10 +10,8 @@ import kotlinx.android.synthetic.main.level3_activity_recycler_view2.*
 import java.util.*
 
 // https://www.youtube.com/watch?v=Vyqz_-sJGFk
-// onclicklistener https://www.youtube.com/watch?v=69C1ljfDvl0&t=82s
-// this is the second recyclerview.
-
-//todo: bug: if i scroll all the way down and up, the numbers in the text box keep increasing (the position integer remains the same)
+// onClickListener https://www.youtube.com/watch?v=69C1ljfDvl0&t=82s
+// this is the recyclerview with clickListener of only one widget each recyclerView item.
 
 class RecyclerView2 : AppCompatActivity(), OnImageListener {
     private val mTexts = ArrayList<String>()

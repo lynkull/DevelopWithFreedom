@@ -1,4 +1,4 @@
-package com.aldreduser.developwithfreedom.Level_3.Level_3.recyclerview.recyclerview.recycler2;
+package com.aldreduser.developwithfreedom.Level_3.Level_3.recyclerview.recyclerview.recycler3;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -6,13 +6,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.aldreduser.developwithfreedom.R;
+
 import java.util.ArrayList;
 
-public class Adapter2 extends RecyclerView.Adapter<Adapter2.ViewHolder> {
+public class Adapter3 extends RecyclerView.Adapter<Adapter3.ViewHolder> {
 
     private static final String TAG = "Adapter2"; //for debugging
 
@@ -21,7 +24,7 @@ public class Adapter2 extends RecyclerView.Adapter<Adapter2.ViewHolder> {
     private OnImageListener mOnImageListener;
     private int tempNumber = 0; //used to number the texts
 
-    public Adapter2(ArrayList<String> imageTexts, ArrayList<Integer> images, OnImageListener onImageListener) {
+    public Adapter3(ArrayList<String> imageTexts, ArrayList<Integer> images, OnImageListener onImageListener) {
         mTexts = imageTexts;
         mImages = images;
 
@@ -69,7 +72,14 @@ public class Adapter2 extends RecyclerView.Adapter<Adapter2.ViewHolder> {
             parentLayout = itemView.findViewById(R.id.parent_layout);
             this.onImageListener = onImageListener;
 
-            itemView.setOnClickListener(this);
+            //todo: do something when the image is clicked, and something else when the text is clicked
+            image.setOnClickListener( new View.OnClickListener() {
+                public void onClick(View v) {
+
+                }
+            });
+            imageName.setOnClickListener(this);
+            //itemView.setOnClickListener(this);
         }
 
         @Override
@@ -77,7 +87,7 @@ public class Adapter2 extends RecyclerView.Adapter<Adapter2.ViewHolder> {
             onImageListener.onImageClick(getAdapterPosition());
         }
     }
-     public interface OnImageListener {
+    public interface OnImageListener {
         void onImageClick(int position);
-     }
+    }
 }
