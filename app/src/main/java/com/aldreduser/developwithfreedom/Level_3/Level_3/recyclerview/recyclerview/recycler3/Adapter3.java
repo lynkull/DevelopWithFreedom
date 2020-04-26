@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class Adapter3 extends RecyclerView.Adapter<Adapter3.ViewHolder> {
 
-    private static final String TAG = "Adapter2"; //for debugging
+    private static final String TAG = "Adapter3"; //for debugging
 
     private ArrayList<String> mTexts = new ArrayList<>();
     private ArrayList<Integer> mImages = new ArrayList<>();

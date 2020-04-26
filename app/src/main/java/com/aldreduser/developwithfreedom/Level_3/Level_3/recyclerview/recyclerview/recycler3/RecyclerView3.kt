@@ -41,6 +41,8 @@ class RecyclerView3 : AppCompatActivity() {
 //    }
 
     private fun loadData() {
+        //i can just add them directly in the Adapter Viewholder, and put the number of views in getItemCount(),
+        // but this might be better for an actual app
         mTexts.add("Text 1")
         mImages.add(R.drawable.ic_launcher_background)
         mTexts.add("Text 2")

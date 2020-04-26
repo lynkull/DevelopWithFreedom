@@ -16,15 +16,12 @@ public class Adapter2 extends RecyclerView.Adapter<Adapter2.ViewHolder> {
 
     private static final String TAG = "Adapter2"; //for debugging
 
-    private ArrayList<String> mTexts = new ArrayList<>();
     private ArrayList<Integer> mImages = new ArrayList<>();
-    private OnImageListener mOnImageListener;
+    private OnImageListener mOnImageListener;       //todo: would the code still work it i take out mOnImageListener?
     private int tempNumber = 0; //used to number the texts
 
-    public Adapter2(ArrayList<String> imageTexts, ArrayList<Integer> images, OnImageListener onImageListener) {
-        mTexts = imageTexts;
+    public Adapter2(ArrayList<Integer> images, OnImageListener onImageListener) {
         mImages = images;
-
         this.mOnImageListener = onImageListener;
     }
 
@@ -46,12 +43,13 @@ public class Adapter2 extends RecyclerView.Adapter<Adapter2.ViewHolder> {
         //todo: bug: if i scroll all the way down and up, the numbers in the text box keep increasing (the position integer remains the same)
 //        tempNumber++;
 //        holder.imageName.setText("Image number " + tempNumber);
+//todo: try:        holder.imageName.setText("Image number " + tempNumber);
     }
 
     @Override
     public int getItemCount() {
         // how many list items are in the recyclerView
-        return mTexts.size();
+        return mImages.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {

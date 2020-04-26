@@ -14,7 +14,6 @@ import java.util.*
 // this is the recyclerview with clickListener of only one widget each recyclerView item.
 
 class RecyclerView2 : AppCompatActivity(), OnImageListener {
-    private val mTexts = ArrayList<String>()
     private val mImages = ArrayList<Int>()
     private val mOnImageListener: OnImageListener? = null
 
@@ -22,13 +21,16 @@ class RecyclerView2 : AppCompatActivity(), OnImageListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.level3_activity_recycler_view2)
 
-        loadData()
         initRecyclerView()
     }
 
     private fun initRecyclerView() {
+        for (i in 1..10) {
+            mImages.add(R.drawable.ic_launcher_background)
+        }
+
         val recyclerView = recycler_view2
-        val adapter = Adapter2(mTexts, mImages, this)    //image names, image urls, listener interface
+        val adapter = Adapter2(mImages, this)    //image names, image urls, listener interface
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
     }
@@ -40,26 +42,5 @@ class RecyclerView2 : AppCompatActivity(), OnImageListener {
 //        //if you were to make it open a new activity on click
 //        val intent = Intent(this, <name of other activity>::class.java)
 //        startActivity(intent)
-//
-//        //<name of array widget declared as a variable in an array in this class>.get(position)    //if want to access the widget that was selected
-    }
-
-    private fun loadData() {
-        mTexts.add("Text 1")
-        mImages.add(R.drawable.ic_launcher_background)
-        mTexts.add("Text 2")
-        mImages.add(R.drawable.ic_launcher_background)
-        mTexts.add("Text 3")
-        mImages.add(R.drawable.ic_launcher_background)
-        mTexts.add("Text 4")
-        mImages.add(R.drawable.ic_launcher_background)
-        mTexts.add("Text 5")
-        mImages.add(R.drawable.ic_launcher_background)
-        mTexts.add("Text 6")
-        mImages.add(R.drawable.ic_launcher_background)
-        mTexts.add("Text 7")
-        mImages.add(R.drawable.ic_launcher_background)
-        mTexts.add("Text 8")
-        mImages.add(R.drawable.ic_launcher_background)
     }
 }

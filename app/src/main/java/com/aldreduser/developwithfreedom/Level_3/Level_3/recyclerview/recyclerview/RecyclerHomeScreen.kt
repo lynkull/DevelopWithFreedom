@@ -16,8 +16,22 @@ recyclerview has:
 -item xml layout
 -adapter file
  */
+
 /*
-with onclicklistener (best practice):
+Architecture components:
+-Layout Manager: Positions the views
+-Item Animator: Animates the Views
+-Adapter: Provides the Views
+
+Adapter Position vs Layout Position:
+-Adapter Position (doesnt change): good for accessing data
+-Layout Position (changes when a layout is moved to another position inside the RecyclerView): god for knowing what layout is above which one
+
+Staggered grid (items have different sizes)
+ */
+
+/*
+with onClickListener (best practice):
 -there should be an OnActionListener interface, and should be called inside ViewHolder in the Adapter
  */
 

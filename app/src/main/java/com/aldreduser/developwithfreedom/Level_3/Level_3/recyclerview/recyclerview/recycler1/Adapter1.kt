@@ -19,6 +19,7 @@ class Adapter1(val nContext:Context, val textx:ArrayList<String>, val images:Arr
 
     //this method is binding the data on the list
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        //it might be more efficient to have this inside the ViewHolder
         holder.itemView.texts.text = textx.get(position)
         holder.itemView.images.setImageResource(images.get(position))
     }
