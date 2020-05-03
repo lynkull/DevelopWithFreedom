@@ -33,11 +33,15 @@ class HideAndShowLayoutActivity : AppCompatActivity() {
     }
 
     fun toggleTextButtonPressed(view: View) {
-        var hiddenText = hidden_text        // try to make this private
+        val hiddenText = hidden_text        // try to make this private
         if(hiddenText.isVisible){
             hidden_text.setVisibility(View.INVISIBLE)
         } else if(!hiddenText.isVisible) {
             hidden_text.setVisibility(View.VISIBLE)
         }
+    }
+
+    fun actionBarButtonPressed(view: View) {
+
     }
 }

@@ -21,7 +21,7 @@
             android:onClick="hideAndShowLayoutButtonClicked"
             android:paddingLeft="10sp"
             android:paddingRight="10sp"
-            android:text="1. Hide and Show Layout" />
+            android:text="1. Simple Layout Moves" />
 
         <Button
             android:id="@+id/button14"
