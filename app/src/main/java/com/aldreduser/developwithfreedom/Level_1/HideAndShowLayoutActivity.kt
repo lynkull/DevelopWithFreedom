@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.widget.Toolbar
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import com.aldreduser.developwithfreedom.R
@@ -28,7 +29,6 @@ class HideAndShowLayoutActivity : AppCompatActivity() {
             }
             return@setOnLongClickListener true
         }
-
         programaticallyButton.setOnClickListener {
             val intent = Intent(this, ProgramaticLayoutActivity::class.java)
             startActivity(intent)
@@ -50,12 +50,16 @@ class HideAndShowLayoutActivity : AppCompatActivity() {
         // Changing the action bar can be done in manifest file, programmatically in file, or in resource file
         //https://www.youtube.com/watch?v=510WE8CmiXI       by changing it in resource files (quick fix)
         //https://www.youtube.com/watch?v=DMkzIOLppf4       by creating a toolbar xml file (BEST PRACTICE, more customizable)
-        //      if doing this, need to change to "Theme.AppCompat.Light.NoActionBar" in styles.xml file
+        //      if doing this, need to change to "Theme.AppCompat.Light.NoActionBar" in styles.xml file. Also include toolbar in xml file
+        //      (i used a textview inside the toolbar and it worked well)
 
-        //this is programatically
-        title = "Whatever title you want."
+        // (best practice) After making xml file
+        setSupportActionBar(toolbar as Toolbar?)
+
+        //  This below is programatically
+        //title = "Whatever title you want."
         //font size
-        //gravity (center)
+        //gravity (can'y change gravity with this strategy)
         //      these crash  my app:
         //back button   actionBar.setHomeButtonEnabled(true); // actionBar.setDisplayHomeAsUpEnabled(true)
         //actionBar.setIcon(R.drawable.ic_android) //this didn't work but idek what an icon is used for here

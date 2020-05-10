@@ -44,10 +44,6 @@ class LocalStorageActivity : AppCompatActivity() {
         val intent = Intent(this, SharedPreferenceActivity::class.java)
         startActivity(intent)
     }
-    fun appSpecificStorageClicked(view: View) {
-        val intent = Intent(this, AppSpecificStorage::class.java)
-        startActivity(intent)
-    }
     fun databaseSQLButtonClicked(view: View) {
         val intent = Intent(this, StorageSQLActivity::class.java)
         startActivity(intent)

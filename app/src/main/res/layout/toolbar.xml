@@ -2,7 +2,20 @@
 <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorPrimary"
-    android:elevation="2dp">
+    android:elevation="2dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:titleTextColor="@color/ic_launcher_background"
+    app:titleMarginStart="50dp"
+    app:title=" "
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="this text"
+        android:id="@+id/toolbar_title"/>
 
 </androidx.appcompat.widget.Toolbar>
