@@ -45,7 +45,7 @@ class LocalStorageActivity : AppCompatActivity() {
         startActivity(intent)
     }
     fun databaseSQLButtonClicked(view: View) {
-        val intent = Intent(this, StorageSQLActivity::class.java)
+        val intent = Intent(this, SQLitePt1::class.java)
         startActivity(intent)
     }
 }
