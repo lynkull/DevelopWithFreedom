@@ -30,11 +30,11 @@ Room annotations and main components:
 /*
 Dependencies:
 https://developer.android.com/topic/libraries/architecture/adding-components
-//lifecycle: def lifecycle_version...
+ -lifecycle: def lifecycle_version...
     // ViewModel
     // LiveData
     // Annotation processor
-//room: def room_version...
+ -room: def room_version...
     //implementation
     //annotationProcessor
 
@@ -45,7 +45,7 @@ implementation 'androidx.cardview:cardview:1.0.0'
 Summary of the app:
     Note taking app
         -each note has a title, description, and note number
-        -stored in SQLite
+        -stored in SQLite (Room)
         -displayed in recyclerView
     Can add new notes
     Can modify existing notes.
