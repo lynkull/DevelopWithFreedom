@@ -6,6 +6,9 @@ import android.os.AsyncTask;
 import androidx.lifecycle.LiveData;
 import java.util.List;
 
+//not part of the Room architecture components library, but is a best practice way
+//(provides an abstraction layer on top of the different data sources)
+
 public class NoteRepository {
     private NoteDao noteDao;
     private LiveData<List<Note>> allNotes;
