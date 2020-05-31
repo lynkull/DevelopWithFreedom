@@ -2,7 +2,11 @@ package com.aldreduser.developwithfreedom.Level_2.Storage_Package.roomStorage
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.annotation.Nullable
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.aldreduser.developwithfreedom.R
+import com.aldreduser.developwithfreedom.Level_2.Storage_Package.roomStorage.NoteViewModel
 
 // Using ROOM
 
@@ -54,9 +58,22 @@ Summary of the app:
  */
 
 class SQLitePt1 : AppCompatActivity() {
+    private lateinit var noteViewModel: NoteViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.level2_activity_sqlite1)
+
+        //get a reference to the viewModel in the activity
+        noteViewModel = ViewModelProvider(this).get(NoteViewModel::class.java)
+        //attach the observer to the liveData
+        noteViewModel.allNotes.observe(this, Observer<List<Note>>() {
+            @Override
+            fun onChanged(@Nullable notes: List<Note>) {
+                //this is triggered whenever the data in our liveData object changes
+                //todo: update recyclerview
+            }
+        })
     }
+
 }
