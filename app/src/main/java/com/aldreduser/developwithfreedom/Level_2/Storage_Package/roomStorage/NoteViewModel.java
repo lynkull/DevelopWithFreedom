@@ -18,4 +18,19 @@ public class NoteViewModel extends AndroidViewModel {
         allNotes = repository.getAllNotes();
     }
 
+    public void insert(Note note) {
+        repository.insert(note);
+    }
+    public void update(Note note) {
+        repository.update(note);
+    }
+    public void delete(Note note) {
+        repository.delete(note);
+    }
+    public void deleteAllNotes(Note note) {
+        repository.deleteAllNotes();
+    }
+    public LiveData<List<Note>> getAllNotes() {
+        return allNotes;
+    }
 }
