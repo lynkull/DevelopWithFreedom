@@ -33,6 +33,7 @@ Room annotations and main components:
  */
 /*
 Dependencies:
+(better to use androidx dependencies instead)
 https://developer.android.com/topic/libraries/architecture/adding-components
  -lifecycle: def lifecycle_version...
     // ViewModel
@@ -75,5 +76,18 @@ class SQLitePt1 : AppCompatActivity() {
             }
         })
     }
-
 }
+
+/*
+This room architecture:
+-Activity
+-ViewModel
+-Repository
+-(Room (SQLite entities <-> DAO))
+
+Created Note class and annotated it @Entity
+    -(Room creates an SQLite Table for it)
+The repository uses the notes @Dao to retrieve all the entries from the note table (as a list wrapped into liveData)
+ViewModel retrieves the same liveData object from the Repository and caches it for the activity
+The activity doesn't store the data (it observes the liveData stored in the ViewModel) and is automatically updated when the database data changes.
+ */

@@ -44,10 +44,14 @@ dependencies {
     // ViewModel
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
+
     // LiveData
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
     // Annotation processor
     annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+    annotationProcessor "android.arch.persistence.room:compiler:$lifecycle_version" //maybe delete, might break my code, use androidx in the future
+    kapt "android.arch.persistence.room:compiler:$lifecycle_version"    //maybe delete, might break my code, use androidx in the future
 
     //room
     implementation "androidx.room:room-runtime:$room_version"
