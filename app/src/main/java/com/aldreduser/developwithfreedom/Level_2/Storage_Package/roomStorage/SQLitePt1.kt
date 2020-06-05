@@ -68,9 +68,9 @@ class SQLitePt1 : AppCompatActivity() {
         setContentView(R.layout.level2_activity_sqlite1)
 
         recycler_view_room_notes.layoutManager = LinearLayoutManager(this)
-        recycler_view_room_notes.setHasFixedSize(true) //if you know the recyclerview size wont change
+        recycler_view_room_notes.setHasFixedSize(true) //if you know the recyclerview size wont change (makes recyclerview more efficient)
 
-        val adapter:NoteAdapter
+        val adapter:NoteAdapter = NoteAdapter()
         recycler_view_room_notes.adapter = adapter
 
         //get a reference to the viewModel in the activity
