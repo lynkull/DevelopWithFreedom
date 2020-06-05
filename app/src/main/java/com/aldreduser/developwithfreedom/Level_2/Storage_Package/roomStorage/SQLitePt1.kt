@@ -5,8 +5,10 @@ import android.os.Bundle
 import androidx.annotation.Nullable
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.aldreduser.developwithfreedom.R
 import com.aldreduser.developwithfreedom.Level_2.Storage_Package.roomStorage.NoteViewModel
+import kotlinx.android.synthetic.main.level2_activity_sqlite1.*
 
 // Using ROOM
 
@@ -64,6 +66,12 @@ class SQLitePt1 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.level2_activity_sqlite1)
+
+        recycler_view_room_notes.layoutManager = LinearLayoutManager(this)
+        recycler_view_room_notes.setHasFixedSize(true) //if you know the recyclerview size wont change
+
+        val adapter:NoteAdapter
+        recycler_view_room_notes.adapter = adapter
 
         //get a reference to the viewModel in the activity
         noteViewModel = ViewModelProvider(this).get(NoteViewModel::class.java)
