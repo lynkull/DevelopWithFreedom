@@ -80,7 +80,8 @@ class SQLitePt1 : AppCompatActivity() {
             @Override
             fun onChanged(@Nullable notes: List<Note>) {
                 //this is triggered whenever the data in our liveData object changes
-                //todo: update recyclerview
+                //update recyclerview
+                adapter.setNotes(notes)
             }
         })
     }
