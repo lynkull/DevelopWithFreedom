@@ -1,5 +1,7 @@
 package com.aldreduser.developwithfreedom.Level_2.Storage_Package.roomStorage
 
+import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.annotation.Nullable
@@ -61,11 +63,18 @@ Summary of the app:
  */
 
 class SQLitePt1 : AppCompatActivity() {
+    val ADD_NOTE_REQUEST: Int = 1
     private lateinit var noteViewModel: NoteViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.level2_activity_sqlite1)
+
+        //click add note and open new activity
+        button_add_note.setOnClickListener{
+            val intent: Intent = Intent(this, AddNoteActivity::class.java)
+            startActivityForResult(intent, ADD_NOTE_REQUEST)
+        }
 
         recycler_view_room_notes.layoutManager = LinearLayoutManager(this)
         recycler_view_room_notes.setHasFixedSize(true) //if you know the recyclerview size wont change (makes recyclerview more efficient)
@@ -84,6 +93,15 @@ class SQLitePt1 : AppCompatActivity() {
                 adapter.setNotes(notes)
             }
         })
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if(requestCode == ADD_NOTE_REQUEST && resultCode == Activity.RESULT_OK) {
+            var title:String = data?.getStringExtra(AddNoteActivity.EXTRA_TITLE) ?: "ERROR"
+            //todo: error is probably happening bc EXTRA_TITLE is not a static variable, might need to create a companion object (or use getters)
+        }
     }
 }
 
