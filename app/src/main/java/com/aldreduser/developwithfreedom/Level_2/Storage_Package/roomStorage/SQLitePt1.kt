@@ -99,6 +99,7 @@ class SQLitePt1 : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
 
         if(requestCode == ADD_NOTE_REQUEST && resultCode == Activity.RESULT_OK) {
+            var thisEXTRA_TITLE =
             var title:String = data?.getStringExtra(AddNoteActivity.EXTRA_TITLE) ?: "ERROR"
             //todo: error is probably happening bc EXTRA_TITLE is not a static variable, might need to create a companion object (or use getters)
         }

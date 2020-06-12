@@ -34,9 +34,8 @@ class FunctionsAndParametersActivity : AppCompatActivity() {
         for(item in numbers){
             sum += item
         }
-        textView15.setText("$sum")
+        textView15.text = "$sum"
     }
-
 
     // pass functions as parameters
     fun foo(function: () -> (Unit)) {
@@ -45,6 +44,25 @@ class FunctionsAndParametersActivity : AppCompatActivity() {
     fun bar() {
         println("Hello World")
     }
+
+    //companion object
+    class companionObjectClass {
+        companion object {
+
+            private val companionObjectValue = "kfenekfnke"
+
+            fun showHello() {
+                println("Hello")
+            }
+        }
+    }
+    fun compObjectOutput() {
+        companionObjectClass.showHello()
+    }
+    /* @JvmStatic: On the JVM you can have members of companion objects generated as real static methods and fields, if you use the @JvmStatic annotation.
+    and then it will exist as a real Java static function, accessible from both Java and Kotlin as ClassName.functionName()
+    Can have a name for the companion object:    companion object {}       or        companion object Blah {}                Foo.Blah.a()
+    */
 
     //i didn't understand this one
     /*fun foo(m: String, bar: (m: String) -> Unit) {

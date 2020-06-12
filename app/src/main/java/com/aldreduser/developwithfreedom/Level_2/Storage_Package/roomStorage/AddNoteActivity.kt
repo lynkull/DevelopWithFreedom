@@ -37,6 +37,10 @@ class AddNoteActivity : AppCompatActivity() {
         title = "Add Note"
     }
 
+    public fun getExtraTitle(): String {
+        return EXTRA_TITLE
+    }
+
     private fun saveNote() {
         var title: String = edit_text_title.text.toString()
         var description: String = edit_text_description.text.toString()
