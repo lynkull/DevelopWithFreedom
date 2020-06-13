@@ -14,13 +14,19 @@ import com.aldreduser.developwithfreedom.R
 import kotlinx.android.synthetic.main.activity_add_note.*
 
 class AddNoteActivity : AppCompatActivity() {
-    //key for intent extra (best practice is to use the package name + '.somethingElse')
-    public val EXTRA_TITLE =
-        "com.aldreduser.developwithfreedom.Level_2.Storage_Package.roomStorage.EXTRA_TITLE"
-    public val EXTRA_DESCRIPTION =
-        "com.aldreduser.developwithfreedom.Level_2.Storage_Package.roomStorage.EXTRA_DESCRIPTION"
-    public val EXTRA_PRIORITY =
-        "com.aldreduser.developwithfreedom.Level_2.Storage_Package.roomStorage.EXTRA_PRIORITY"
+
+    companion object {
+        //key for intent extra (best practice is to use the package name + '.somethingElse')
+        @JvmStatic
+        public val EXTRA_TITLE =
+            "com.aldreduser.developwithfreedom.Level_2.Storage_Package.roomStorage.EXTRA_TITLE"
+        @JvmStatic
+        public val EXTRA_DESCRIPTION =
+            "com.aldreduser.developwithfreedom.Level_2.Storage_Package.roomStorage.EXTRA_DESCRIPTION"
+        @JvmStatic
+        public val EXTRA_PRIORITY =
+            "com.aldreduser.developwithfreedom.Level_2.Storage_Package.roomStorage.EXTRA_PRIORITY"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +39,8 @@ class AddNoteActivity : AppCompatActivity() {
         number_picker_priority.minValue = 1
         number_picker_priority.maxValue = 10
 
-        supportActionBar!!.setHomeAsUpIndicator(R.drawable.ic_close)
+        //todo: make this work. Maybe i dont really care, not hte point if this SQLite feature.
+        //supportActionBar!!.setHomeAsUpIndicator(R.drawable.ic_close)
         title = "Add Note"
     }
 

@@ -51,6 +51,7 @@ class FunctionsAndParametersActivity : AppCompatActivity() {
 
             private val companionObjectValue = "kfenekfnke"
 
+            @JvmStatic
             fun showHello() {
                 println("Hello")
             }

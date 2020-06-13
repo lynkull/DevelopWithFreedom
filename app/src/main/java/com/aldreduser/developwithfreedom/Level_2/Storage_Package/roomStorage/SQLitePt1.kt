@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.annotation.Nullable
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -99,9 +100,17 @@ class SQLitePt1 : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
 
         if(requestCode == ADD_NOTE_REQUEST && resultCode == Activity.RESULT_OK) {
-            var thisEXTRA_TITLE =
             var title:String = data?.getStringExtra(AddNoteActivity.EXTRA_TITLE) ?: "ERROR"
-            //todo: error is probably happening bc EXTRA_TITLE is not a static variable, might need to create a companion object (or use getters)
+            var description:String = data?.getStringExtra(AddNoteActivity.EXTRA_DESCRIPTION) ?: "ERROR"
+            var priority:Int = data?.getIntExtra(AddNoteActivity.EXTRA_PRIORITY, 1) ?: 1
+
+            var note:Note = Note(title, description, priority)
+            noteViewModel.insert(note)
+
+            Toast.makeText(this, "Note saved", Toast.LENGTH_SHORT).show()
+        } else {
+            // if resultCode == Activity.RESULT_CANCELED
+            Toast.makeText(this, "Note not saved", Toast.LENGTH_SHORT).show()
         }
     }
 }
