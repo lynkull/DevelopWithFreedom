@@ -39,7 +39,8 @@ class AddNoteActivity : AppCompatActivity() {
         number_picker_priority.minValue = 1
         number_picker_priority.maxValue = 10
 
-        //todo: make this work. Maybe i dont really care, not hte point if this SQLite feature.
+        //todo: make this work. Maybe i don't really care thb, not hte point if this SQLite feature.
+        //  probably bc i did something with the toolbar at a globa; ;evel (like hid it or something)
         //supportActionBar!!.setHomeAsUpIndicator(R.drawable.ic_close)
         title = "Add Note"
     }
