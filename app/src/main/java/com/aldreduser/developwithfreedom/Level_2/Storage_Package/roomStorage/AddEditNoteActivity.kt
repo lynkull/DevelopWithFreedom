@@ -13,7 +13,7 @@ import android.widget.Toast
 import com.aldreduser.developwithfreedom.R
 import kotlinx.android.synthetic.main.activity_add_note.*
 
-class AddNoteActivity : AppCompatActivity() {
+class AddEditNoteActivity : AppCompatActivity() {
 
     companion object {
         //key for intent extra (best practice is to use the package name + '.somethingElse')

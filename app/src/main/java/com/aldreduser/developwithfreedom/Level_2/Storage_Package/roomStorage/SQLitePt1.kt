@@ -79,7 +79,7 @@ class SQLitePt1 : AppCompatActivity() {
 
         //click add note and open new activity
         button_add_note.setOnClickListener{
-            val intent: Intent = Intent(this, AddNoteActivity::class.java)
+            val intent: Intent = Intent(this, AddEditNoteActivity::class.java)
             startActivityForResult(intent, ADD_NOTE_REQUEST)
         }
 
@@ -114,15 +114,25 @@ class SQLitePt1 : AppCompatActivity() {
             }
         }).attachToRecyclerView(recycler_view_room_notes)
 
+
+        //todo: idk if this will work
+        //https://www.youtube.com/watch?v=dYbbTGiZ2sA&list=PLrnPJCHvNZuDihTpkRs6SpZhqgBqPU118&index=9       7:00
+        adapter.setOnItemClickListener(NoteAdapter.OnItemClickListener {note ->
+            val intent:Intent = Intent(this, AddEditNoteActivity::class.java)
+            //start activity, and send the title, description and priority
+            intent.putExtra(AddEditNoteActivity.EXTRA_TITLE, note.title)
+            intent.putExtra(AddEditNoteActivity.EXTRA_DESCRIPTION, note.description)
+            intent.putExtra(AddEditNoteActivity.EXTRA_PRIORITY, note.priority)
+        })
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
         if(requestCode == ADD_NOTE_REQUEST && resultCode == Activity.RESULT_OK) {
-            var title:String = data?.getStringExtra(AddNoteActivity.EXTRA_TITLE) ?: "ERROR"
-            var description:String = data?.getStringExtra(AddNoteActivity.EXTRA_DESCRIPTION) ?: "ERROR"
-            var priority:Int = data?.getIntExtra(AddNoteActivity.EXTRA_PRIORITY, 1) ?: 1
+            var title:String = data?.getStringExtra(AddEditNoteActivity.EXTRA_TITLE) ?: "ERROR"
+            var description:String = data?.getStringExtra(AddEditNoteActivity.EXTRA_DESCRIPTION) ?: "ERROR"
+            var priority:Int = data?.getIntExtra(AddEditNoteActivity.EXTRA_PRIORITY, 1) ?: 1
 
             var note:Note = Note(title, description, priority)
             noteViewModel.insert(note)

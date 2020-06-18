@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Level_2.Storage_Package.roomStorage.AddNoteActivity"></activity>
+        <activity android:name=".Level_2.Storage_Package.roomStorage.AddEditNoteActivity"></activity>
         <activity android:name=".Level_3.Level_3.recyclerview.recyclerview.recycler3.RecyclerView3" />
         <activity android:name=".Level_3.Level_3.recyclerview.recyclerview.RecyclerHomeScreen" />
         <activity android:name=".Level_3.Level_3.recyclerview.recyclerview.recycler2.RecyclerView2" />
