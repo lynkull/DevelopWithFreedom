@@ -71,6 +71,8 @@ Summary of the app:
 //note: this app feature doesn't work well bc i think i hid the toolbar at a global level and the tutorial uses it for a lot
 class SQLitePt1 : AppCompatActivity() {
     val ADD_NOTE_REQUEST: Int = 1
+    val EDIT_NOTE_REQUEST: Int = 2
+
     private lateinit var noteViewModel: NoteViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -120,9 +122,11 @@ class SQLitePt1 : AppCompatActivity() {
         adapter.setOnItemClickListener(NoteAdapter.OnItemClickListener {note ->
             val intent:Intent = Intent(this, AddEditNoteActivity::class.java)
             //start activity, and send the title, description and priority
+            intent.putExtra(AddEditNoteActivity.EXTRA_ID, note.id)
             intent.putExtra(AddEditNoteActivity.EXTRA_TITLE, note.title)
             intent.putExtra(AddEditNoteActivity.EXTRA_DESCRIPTION, note.description)
             intent.putExtra(AddEditNoteActivity.EXTRA_PRIORITY, note.priority)
+            startActivityForResult(intent, EDIT_NOTE_REQUEST)
         })
     }
 
@@ -138,6 +142,23 @@ class SQLitePt1 : AppCompatActivity() {
             noteViewModel.insert(note)
 
             Toast.makeText(this, "Note saved", Toast.LENGTH_SHORT).show()
+        } else if(requestCode == EDIT_NOTE_REQUEST && resultCode == Activity.RESULT_OK) {
+            val id:Int = data?.getIntExtra(AddEditNoteActivity.EXTRA_ID, -1) ?: -1
+
+            if (id == -1) {
+                //if id exists
+                Toast.makeText(this, "Note can't be updated", Toast.LENGTH_SHORT).show()
+                return
+            }
+            var title:String = data?.getStringExtra(AddEditNoteActivity.EXTRA_TITLE) ?: "ERROR"
+            var description:String = data?.getStringExtra(AddEditNoteActivity.EXTRA_DESCRIPTION) ?: "ERROR"
+            var priority:Int = data?.getIntExtra(AddEditNoteActivity.EXTRA_PRIORITY, 1) ?: 1
+
+            val note:Note = Note(title, description, priority)
+            note.id = id
+            noteViewModel.update(note)
+            Toast.makeText(this, "Note updated", Toast.LENGTH_SHORT).show()
+
         } else {
             // if resultCode == Activity.RESULT_CANCELED
             Toast.makeText(this, "Note not saved", Toast.LENGTH_SHORT).show()
